@@ -1,7 +1,7 @@
 <template>
   <div class="card">
     <h2>{{ charactersData.name }}</h2>
-    <p><span :class="['status-circle', character?.status === 'Alive' ? 'alive' : character?.status === 'Dead' ? 'dead' : 'unknown']"></span>
+    <p><span :class="['status-circle', charactersData.status === 'Alive' ? 'alive' : charactersData.status === 'Dead' ? 'dead' : 'unknown']"></span>
       {{ charactersData.status }} - {{ charactersData.species }} </p>
     <p>Last known location: {{ charactersData.location.name }}</p>
     <img :src="charactersData.image" :alt="charactersData.name" class="card-image">
