@@ -3,7 +3,7 @@
     <h2>{{charactersData.name}}</h2>
     <p><span></span> {{charactersData.status}} -  {{charactersData.species}} </p>
     <p>Last known location: {{charactersData.location.name}}</p>
-    <img :src="charactersData.image" :alt="charactersData.name">
+    <img :src="charactersData.image" :alt="charactersData.name" class="card-image">
   </div>
 </template>
 
@@ -24,5 +24,10 @@
       padding: 16px;
       margin: 16px;
       border-radius: 12px;
+      width: 200px;
+    }
+    .card-image {
+      width: 100%;
+      height: auto;
     }
 </style>
