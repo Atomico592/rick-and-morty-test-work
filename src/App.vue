@@ -1,14 +1,19 @@
 <template>
 <div>
   <h1>Rick and Morty Character List</h1>
+
+  <div v-if="charactersData.length">
+    <Card v-for="character in charactersData" :key="charactersData.id" :character="character"  :characters-data="character"/>
+  </div>
 </div>
 </template>
 <script>
 import { ref, watch, onMounted } from 'vue';
 import axios from 'axios';
+import Card from "@/components/Card.vue";
 
 export default {
- components: {},
+ components: {Card},
 
 setup() {
   const charactersData = ref([]);
